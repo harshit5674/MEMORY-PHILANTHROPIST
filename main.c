@@ -1,15 +1,15 @@
 #include<stdio.h>
 #include<assert.h>
-const int N=640000
+const int N=640000;
 char heap[N]={0};
 
-size_t heap_size=;
+size_t heap_size=0;
 
 void *heap_alloc(size_t size){
 	assert(heap_size+size<=N);
-	void *resultant=heap+heap_size;
+	void *memory_allocated=heap+heap_size;
 	heap_size+=size;
-	return result;
+	return memory_allocated;
 }
 
 void heap_free(void *p){
